@@ -5,12 +5,14 @@ import sagas from "./sagas";
 import weatherReducer from "./reducers/Weather";
 import dashboardStats from './reducers/DashboardStats'
 import dataOptions from './reducers/dataOptions'
+import subscriptionData from './reducers/subscriptionData'
 
 export default () => {
   const rootReducer = combineReducers({
     weather: weatherReducer,
     dashboardStats: dashboardStats,
-    dataOptions
+    dataOptions,
+    subscriptionData
   });
 
   const composeEnhancers = composeWithDevTools({});

@@ -43,17 +43,11 @@ export default function SelectionInput(props) {
   const dispatch = useDispatch()
   
 
-  const [chipData, setChipData] = React.useState([
-    { key: 0, label: 'Angular' },
-    
-  ]);
+  
 
   const {options, selectedOptions} = useSelector(
     getOptions
   )
-
-  console.log('Redux state options', options, 'Redux state selected', selectedOptions)
-
   const handleDelete = chipToDelete => () => {
     dispatch({type:actions.REMOVE_DATA_OPTION, removed: chipToDelete})
   };

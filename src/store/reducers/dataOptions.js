@@ -3,7 +3,7 @@ import * as actions from '../actions'
 const initialState = {
     options: [
       {name: 'Flare Temp', value: 'flareTemp'},
-      {name: 'Tubing Pressure', value: 'tubungPressure'},
+      {name: 'Tubing Pressure', value: 'tubingPressure'},
       {name: 'Injector Valve Open', value: 'injValveOpen'},
       {name: 'Oil Temp', value: 'oilTemp'},
       {name: 'Casing Pressure' , value: 'casingPressure'},
