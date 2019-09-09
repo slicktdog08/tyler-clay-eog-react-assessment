@@ -69,7 +69,7 @@ const Weather = () => {
 
   return (
     <Chip
-      label={`Weather in ${locationName}: ${description} and ${temperatureinFahrenheit}°`}
+      label={`Weather in ${locationName}: ${description} and ${typeof(temperatureinFahrenheit) != 'undefined' ? parseFloat(temperatureinFahrenheit).toFixed(2) : ''}°`}
     />
   );
 };

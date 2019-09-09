@@ -25,7 +25,6 @@ const initialState = {
 const subscriptionDataReceived = (state, action) => {
     const {metric, value} = action.data;
     if(metric !== 'undefined'){
-        
         return {
             ...state,
             [metric]: {

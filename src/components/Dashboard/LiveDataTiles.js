@@ -40,14 +40,12 @@ const getLiveData = state => {
 
 export default () => {
     const classes = useStyles();
-    const dispatch = useDispatch();
     const {selectedOptions} = useSelector(
         getSelectedOptions
     );
     const subscriptionData = useSelector(
         getLiveData
     )
-    console.log(subscriptionData)
     
     return(
         <div className={classes.root}>

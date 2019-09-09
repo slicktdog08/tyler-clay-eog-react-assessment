@@ -6,13 +6,15 @@ import weatherReducer from "./reducers/Weather";
 import dashboardStats from './reducers/DashboardStats'
 import dataOptions from './reducers/dataOptions'
 import subscriptionData from './reducers/subscriptionData'
+import historicalData from './reducers/historicalData'
 
 export default () => {
   const rootReducer = combineReducers({
     weather: weatherReducer,
     dashboardStats: dashboardStats,
     dataOptions,
-    subscriptionData
+    subscriptionData,
+    historicalData
   });
 
   const composeEnhancers = composeWithDevTools({});

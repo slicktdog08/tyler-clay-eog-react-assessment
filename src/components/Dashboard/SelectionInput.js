@@ -48,6 +48,7 @@ export default function SelectionInput(props) {
   const {options, selectedOptions} = useSelector(
     getOptions
   )
+  
   const handleDelete = chipToDelete => () => {
     dispatch({type:actions.REMOVE_DATA_OPTION, removed: chipToDelete})
   };

@@ -9,21 +9,22 @@ import * as actions from "../../store/actions";
 import { useDispatch, useSelector } from "react-redux";
 import SelectionInput from './SelectionInput'
 import LiveDataTiles from './LiveDataTiles'
+import Chart from './Chart'
 
 //Subscription is not filtered by type - No argument for this in schema - We will let Redux Handle this :(
 const subscriptionQuery = `
-subscription {
-  newMeasurement{
-    metric,
-    at,
-    value,
-    unit
+  subscription {
+    newMeasurement{
+      metric,
+      at,
+      value,
+      unit
+    }
   }
-}
 `
 
 export default (props) => { 
-
+  //Real Time Data
   const dispatch = useDispatch();
 
   const [subResult] = useSubscription({
@@ -40,6 +41,7 @@ export default (props) => {
     <div>
       <SelectionInput/>
       <LiveDataTiles/>
+      <Chart/>
       {/*<TubingPressure/>*/}
       {/*}
        
