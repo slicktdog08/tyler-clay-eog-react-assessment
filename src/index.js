@@ -14,7 +14,7 @@ const client = createClient({
     ]
 });
 const subscriptionClient = new SubscriptionClient(
-    `ws://react.eogresources.com/graphql`,
+    `wss://react.eogresources.com/graphql`,
     {}
 )
 
