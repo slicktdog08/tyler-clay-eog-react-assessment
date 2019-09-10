@@ -2,12 +2,12 @@ import * as actions from '../actions'
 
 const initialState = {
     options: [
-      {name: 'Flare Temp', value: 'flareTemp'},
-      {name: 'Tubing Pressure', value: 'tubingPressure'},
-      {name: 'Injector Valve Open', value: 'injValveOpen'},
-      {name: 'Oil Temp', value: 'oilTemp'},
-      {name: 'Casing Pressure' , value: 'casingPressure'},
-      {name: 'Water Temp', value: 'waterTemp'}
+      {name: 'Flare Temp', value: 'flareTemp', unit: 'F'},
+      {name: 'Tubing Pressure', value: 'tubingPressure', unit: 'PSI'},
+      {name: 'Injector Valve Open', value: 'injValveOpen', unit: '%'},
+      {name: 'Oil Temp', value: 'oilTemp', unit: 'F'},
+      {name: 'Casing Pressure' , value: 'casingPressure', unit: 'PSI'},
+      {name: 'Water Temp', value: 'waterTemp', unit: 'F'}
     ],
     selectedOptions: []
 }

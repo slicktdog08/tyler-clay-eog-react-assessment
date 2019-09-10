@@ -21,7 +21,10 @@ const useStyles = makeStyles({
     },
     value: {
         color: 'black',
-        fontSize: 15
+        fontSize: 30
+    },
+    unit: {
+        fontSize: 12
     }
 });
 
@@ -52,7 +55,7 @@ export default () => {
             <Grid container spacing={0}>
                 {selectedOptions.map(o=>{
                     return(
-                        <Grid item md={2}>
+                        <Grid item md={2} key={o.value}>
                             <Card className={classes.card}>
                                 <CardContent>
                                     <Typography className={classes.title} color="textSecondary" gutterBottom>
@@ -60,7 +63,7 @@ export default () => {
                                     </Typography>
                                     
                                     <Typography variant="body2" component="p" className={classes.value}>
-                                        {subscriptionData[o.value].value}
+                                        {subscriptionData[o.value].value} <small className={classes.unit}>{o.unit}</small>
                                     </Typography>
                                 </CardContent>
                             </Card>

@@ -48,7 +48,7 @@ export default function SelectionInput(props) {
   const {options, selectedOptions} = useSelector(
     getOptions
   )
-  
+
   const handleDelete = chipToDelete => () => {
     dispatch({type:actions.REMOVE_DATA_OPTION, removed: chipToDelete})
   };
@@ -60,8 +60,10 @@ export default function SelectionInput(props) {
 
   return (
     <Paper className={classes.root}>
+      {selectedOptions != 'undefined' && selectedOptions.length != 6 ?
       <FormControl className={classes.formControl}>
-        <InputLabel htmlFor="data-point">Select Data Point to Add</InputLabel>
+        <InputLabel htmlFor="data-point">
+          {typeof(selectedOptions) != 'undefined' && selectedOptions.length === 0 ? 'Select Data Point to Add' : 'Add Another Data Point'}</InputLabel>
         <Select
           onChange={handleChange}
           value={``}
@@ -74,7 +76,8 @@ export default function SelectionInput(props) {
             )
           })}
         </Select>
-      </FormControl>
+      </FormControl> : <span/>
+      }
       {selectedOptions.map(data => {
         return (
           <Chip

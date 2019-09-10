@@ -21,19 +21,23 @@ const historicalDataReceived = (state, action)=> {
             casingPressure: null,
             waterTemp: null
         }; 
+        try{
+            result.time = Moment(data[0].measurements[i].at).format("LTS"); //always trust time from first array
+            result.tubingPressure = data[0].measurements[i].value;
+            result.oilTemp = data[1].measurements[i].value;
+            result.flareTemp = data[2].measurements[i].value;
+            result.injValveOpen = data[3].measurements[i].value;
+            result.casingPressure = data[4].measurements[i].value;
+            result.waterTemp = data[5].measurements[i].value;
 
-        result.time = Moment(data[0].measurements[i].at).format("LTS"); //always trust time from first array
-        result.tubingPressure = data[0].measurements[i].value;
-        result.oilTemp = data[1].measurements[i].value;
-        result.flareTemp = data[2].measurements[i].value;
-        result.injValveOpen = data[3].measurements[i].value;
-        result.casingPressure = data[4].measurements[i].value;
-        result.waterTemp = data[5].measurements[i].value;
-
-        results.push(result)
+            results.push(result)
+        }
+        catch(err){
+            console.log(`Data received by reducer was not in the expected format! Error: ${err}`)
+        }
     }
 
-    //console.log('results ', results)
+    
 
     return {
         data: results
