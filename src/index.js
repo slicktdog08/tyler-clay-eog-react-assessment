@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import { Provider, createClient, useQuery, defaultExchanges, subscriptionExchange } from "urql";
+import { Provider, createClient, defaultExchanges, subscriptionExchange } from "urql";
 import {SubscriptionClient} from 'subscriptions-transport-ws'
 const client = createClient({
     url: "https://react.eogresources.com/graphql",

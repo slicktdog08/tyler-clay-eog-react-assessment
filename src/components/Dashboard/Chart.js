@@ -105,7 +105,7 @@ export default () => {
             if(typeof(result.data) !== 'undefined' && !result.fetching){            
                 dispatch({type: actions.HISTORICAL_DATA_RECEIVED, data: result.data.getMultipleMeasurements});
             }
-    }, [result.data])
+    }, [result.data, dispatch, result.fetching])
 
     //redux data flowing in
     const {data} = useSelector(
@@ -131,7 +131,7 @@ export default () => {
         data={data}
         margin={{
           top: 5, right: 50, left: 50, bottom: 5,
-        }}    
+        }} 
       >    
         <Tooltip cursor={{ stroke: '#273142', strokeWidth: 2 }} active={false} isAnimationActive={false} />
         <CartesianGrid strokeDasharray="3 3" />

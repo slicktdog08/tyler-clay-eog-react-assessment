@@ -1,12 +1,9 @@
 //This is where Main dashboard code will go
 
-import React, {useEffect} from "react";
-import Card from "@material-ui/core/Card";
-import { makeStyles } from "@material-ui/core/styles";
-import { useQuery, useSubscription } from "urql";
-import LinearProgress from "@material-ui/core/LinearProgress"; //loading
+import React from "react";
+import {  useSubscription } from "urql";
 import * as actions from "../../store/actions";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import SelectionInput from './SelectionInput'
 import LiveDataTiles from './LiveDataTiles'
 import Chart from './Chart'
@@ -42,15 +39,6 @@ export default (props) => {
       <SelectionInput/>
       <LiveDataTiles/>
       <Chart/>
-      {/*<TubingPressure/>*/}
-      {/*}
-       
-      <FlareTemp/>
-      <OilTemp/>
-      <CasingPressure/>
-      <WaterTemp/>
-      <InjValveOpen/>
-  */}
     </div>
   );
 };

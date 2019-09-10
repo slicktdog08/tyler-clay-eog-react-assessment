@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import * as actions from "../store/actions";
-import { Provider, createClient, useQuery } from "urql";
+import { useQuery } from "urql";
 import { useGeolocation } from "react-use";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import Chip from "./Chip";

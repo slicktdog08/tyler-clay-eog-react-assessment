@@ -7,9 +7,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import "react-toastify/dist/ReactToastify.css";
 import Header from "./components/Header";
 import Wrapper from "./components/Wrapper";
-/* No longer Rendered in Application - Dashboard will take place of component
-import NowWhat from "./components/NowWhat";
-*/
+
 import Dashboard from './components/Dashboard/Dashboard'
 
 const store = createStore();

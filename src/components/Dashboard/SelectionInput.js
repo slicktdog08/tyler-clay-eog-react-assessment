@@ -2,7 +2,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Chip from '@material-ui/core/Chip';
 import Paper from '@material-ui/core/Paper';
-import TagFacesIcon from '@material-ui/icons/TagFaces';
 import Select from '@material-ui/core/Select';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
@@ -60,7 +59,7 @@ export default function SelectionInput(props) {
 
   return (
     <Paper className={classes.root}>
-      {selectedOptions != 'undefined' && selectedOptions.length != 6 ?
+      {selectedOptions !== 'undefined' && selectedOptions.length !== 6 ?
       <FormControl className={classes.formControl}>
         <InputLabel htmlFor="data-point">
           {typeof(selectedOptions) != 'undefined' && selectedOptions.length === 0 ? 'Select Data Point to Add' : 'Add Another Data Point'}</InputLabel>
@@ -68,7 +67,7 @@ export default function SelectionInput(props) {
           onChange={handleChange}
           value={``}
         >
-          {typeof(options) != 'undefined' && options.map(o=>{
+          {typeof(options) !== 'undefined' && options.map(o=>{
             return(
               <MenuItem value={JSON.stringify(o)} key={o.value} name={o.name}>
                 {o.name}
