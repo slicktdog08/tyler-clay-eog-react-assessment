@@ -6,6 +6,8 @@ More information about the author of this project can be found at [tylerclay.tec
 
 For your convenience a build of this project is hosted at [eog.tylerclay.tech](https://eog.tylerclay.tech)
 
+Project is hosted using AWS S3, CloudFront, and Route 53
+
 The instructions given for this project can be found here [here](https://react.eogresources.com)
 
 Project looks like it was created from a `npx create-react-app`
