@@ -1,3 +1,6 @@
+## Project Overview
+This was a job take home assessment I did in ~2019 that ultimately helped me obtain a position at EOG Resources. The graphQL api is long gone, and the code is no longer maintained or hosted, but serves as an early career code sample.
+
 ## Create React App Visualization
 
 To run please clone the project directory and run `yarn install` then `yarn start`
